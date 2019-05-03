@@ -8,21 +8,22 @@ Architecture
 
 ![Architecture](https://github.com/snandakumar87/event-analysis-openshift-provision/blob/master/docs:images/Architecture.png)
 
-Mock Emitter: This simulates the customer events (reflection of customer’s interaction with the Bank)
+  * Mock Emitter: This simulates the customer events (reflection of customer’s interaction with the Bank)
 AMQ Streams: Helps support event streaming.
 
-KStreams: the light-weight library provides event processing capabilities, and encapsulates the Java API call to the Rules Engine for processing.
+  * KStreams: the light-weight library provides event processing capabilities, and encapsulates the Java API call to the Rules Engine for processing.
 
-Red Hat Decision Manager: Provides for the heart of the decisioning logic. Filters useful events and predict the next best action.
+  * Red Hat Decision Manager: Provides for the heart of the decisioning logic. Filters useful events and predict the next best action.
 
-Nexus Repository: Remote maven repo to house the decision packages authored using the Decision Central environment.
+  * Nexus Repository: Remote maven repo to house the decision packages authored using the Decision Central environment.
 
-Vertx Kafka Client: Provides for a simulation of downstream systems.
+  * Vertx Kafka Client: Provides for a simulation of downstream systems.
+
 All of the components run on Red Hat Openshift.
 
 
 The event decisioning makes use of the Customer Profile data and the Event information to fire appropriate rules.
-![eventdecisions](https://github.com/snandakumar87/event-analysis-openshift-provision/blob/master/docs:images/Decisions.png =100x20)
+![eventdecisions](https://github.com/snandakumar87/event-analysis-openshift-provision/blob/master/docs:images/Decisions.png)
 
 
 Scenario walkthrough
@@ -44,7 +45,7 @@ Similarly down stream systems can extend this data and create meaningful dashboa
 
 Refer to the following for detailed Demo setup, walthrough and more scenarios.
 
-https://docs.google.com/document/d/1NoQHsm-2UooBUXYzAbrir-qvZwj-1DrQCp2BZ9vCn54/edit?usp=sharing
+[Real Time Event Decisions](https://docs.google.com/document/d/1NoQHsm-2UooBUXYzAbrir-qvZwj-1DrQCp2BZ9vCn54/edit?usp=sharing) 
 
 
 
