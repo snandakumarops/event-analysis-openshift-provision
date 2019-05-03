@@ -40,8 +40,11 @@ The following Offer is sent to the user.
 
 ![scenario1](https://github.com/snandakumar87/event-analysis-openshift-provision/blob/master/docs:images/customerlogin.png)
 
+Similarly down stream systems can extend this data and create meaningful dashboards and functionality on top of the filtered events.
 
+Refer to the following for detailed Demo setup, walthrough and more scenarios.
 
+https://docs.google.com/document/d/1NoQHsm-2UooBUXYzAbrir-qvZwj-1DrQCp2BZ9vCn54/edit?usp=sharing
 
 
 
