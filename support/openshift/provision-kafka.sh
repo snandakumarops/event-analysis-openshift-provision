@@ -192,6 +192,8 @@ oc apply -f examples/kafka/kafka-ephemeral.yaml
 
 oc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/ose-v1.4.15/openjdk/openjdk18-image-stream.json
 
+oc apply -f examples/topic/kafka-topic.yaml
+
 }
 
 
@@ -204,7 +206,9 @@ function create_application() {
   -e RATE=1 \
   --name=emitter
   oc new-app java:8~https://github.com/snandakumar87/event-analysis.git --build-env='NEXUSREPO=http://nexus-nexus.192.168.99.100.nip.io'
+  oc new-app java:8~https://github.com/snandakumar87/alert-fraud-pattern.git
   oc new-app java:8~https://github.com/snandakumar87/event-analysis-webapp.git  -e JAVA_APP_JAR=event-analysis-web-1.0.0-fat.jar
+
   oc expose service event-analysis-webapp
 
 
